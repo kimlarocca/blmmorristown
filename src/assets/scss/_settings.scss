@@ -1,13 +1,21 @@
-$small: 768px;
-$medium: 768px;
-$large: 1240px;
-$xlarge: 1440px;
-
 :root {
+  // Colors
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-dark-gray: #333333;
+  --color-gray: #afafaf;
+  --color-light-gray: #f3f3f3;
+  --color-primary: #fce21b;
+  --color-secondary: #4a44f2;
+  --color-tertiary: #00ffc4;
+  --color-quaternary: #fc6a1b;
+  --color-quinary: #f244e1;
+
   // Fonts
-  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Rock+Salt&display=swap");
-  --font-family-rock-salt: "Rock Salt", sans-serif;
-  --font-family-roboto: "Roboto", sans-serif;
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;600&family=Rock+Salt&display=swap");
+  --font-family-primary: "Roboto", sans-serif;
+  --font-family-secondary: "Rock Salt", sans-serif;
+  --font-family-tertiary: cornerstoneregular, sans-serif;
   --font-family-fa: "Font Awesome 5 Free", serif;
 
   // Font Levers
@@ -49,6 +57,51 @@ $xlarge: 1440px;
   --line-height-15: 1.1;
   --line-height-16: 1;
 
+  // Typography (based on modular scale set above)
+
+  h1 {
+    @include typeface(secondary, 14);
+    @media all and (min-width: $medium) {
+      @include typeface(secondary, 15);
+    }
+    @media all and (min-width: $large) {
+      @include typeface(secondary, 16);
+    }
+  }
+
+  h2 {
+    @include typeface(tertiary, 14);
+    @media all and (min-width: $medium) {
+      @include typeface(tertiary, 14);
+    }
+  }
+
+  h3 {
+    @include typeface(tertiary, 11);
+    @media all and (min-width: $large) {
+      @include typeface(tertiary, 11);
+    }
+  }
+
+  h4 {
+    @include typeface(tertiary, 8);
+    @media all and (min-width: $medium) {
+      @include typeface(tertiary, 8);
+    }
+  }
+
+  h5 {
+    @include typeface(primary, 6);
+    text-transform: uppercase;
+  }
+
+  h6 {
+    @include typeface(primary, 6);
+    @media all and (min-width: $medium) {
+      @include typeface(primary, 6);
+    }
+  }
+
   // Spacing
   --spacing-base-compact: 4px;
   --spacing-increment-compact: 4px;
@@ -76,7 +129,7 @@ $xlarge: 1440px;
 
   // Layout
   --max-width: 1240px;
-  --grid-gutter: 18px;
+  --grid-gutter: 24px;
   --grid-gutter-large: 72px;
 
   // Animation
@@ -86,8 +139,9 @@ $xlarge: 1440px;
   // Main Styles
   --color-text: var(--color-black);
   --color-background: var(--color-white);
-  --font-family: var(--font-family-roboto);
-  --color-hr: var(--color-gray);
+  --font-family: var(--font-family-primary);
+  --color-hr: var(--color-black);
+  --hr-height: 1px;
 
   // Links
   --color-link: var(--color-secondary);
@@ -133,9 +187,9 @@ $xlarge: 1440px;
   --card-color-link: var(--color-secondary);
 
   // Icons
-  --icon-color: var(--color-black);
+  --icon-color: var(--color-primary);
   --icon-background-color: transparent;
-  --icon-color-hover: var(--color-secondary);
+  --icon-color-hover: var(--color-white);
   --icon-background-color-hover: transparent;
   --icon-size: 1rem;
 

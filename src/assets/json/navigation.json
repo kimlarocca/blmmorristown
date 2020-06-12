@@ -1,0 +1,36 @@
+{
+  "navigation": [
+    {
+      "url": "/",
+      "name": "Home"
+    },
+    {
+      "url": "/About",
+      "name": "About Us"
+    },
+    {
+      "url": "/RealTalkMatters",
+      "name": "Real Talk Matters"
+    },
+    {
+      "url": "/Events",
+      "name": "Events"
+    },
+    {
+      "url": "/Donate",
+      "name": "Fundraisers"
+    },
+    {
+      "url": "/Gallery",
+      "name": "Gallery"
+    },
+    {
+      "url": "/Contact",
+      "name": "Contact Us"
+    },
+    {
+      "url": "#",
+      "name": "Join Our Mailing List"
+    }
+  ]
+}
