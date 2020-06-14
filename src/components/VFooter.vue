@@ -3,14 +3,14 @@
     <div class="logo u-align--center u-space--double--bottom">
       <a href="/"><img alt="black lives matter morristown nj" src="/img/logo-footer.png"/></a>
     </div>
-    <nav class="u-align--center u-space--double--bottom">
+    <nav class="l-container u-align--center">
       <ul>
         <li v-for="(link, index) in navigation" :key="index">
           <a :href="link.url">{{link.name}}</a>
         </li>
       </ul>
     </nav>
-    <ul class="social-links u-align--center">
+    <ul class="social-links u-align--center u-space--double--top">
       <social-link
         icon="fab fa-facebook-f"
         link="https://www.facebook.com"
@@ -70,7 +70,6 @@
     }
 
     nav {
-
       ul {
         list-style: none;
 
@@ -86,6 +85,8 @@
     a:active {
       color: var(--color-white);
       font-weight: 600;
+      font-family: var(--font-family-tertiary);
+      font-size: var(--font-size-7);
 
       &:hover {
         color: var(--color-primary);

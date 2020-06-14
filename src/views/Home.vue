@@ -84,12 +84,15 @@
     background: var(--color-primary);
     min-height: calc(100vh - 10rem);
     position: relative;
+    @media all and (min-width: $breakpoint) {
+      min-height: calc(100vh - 6rem);
+    }
 
     .container {
       padding: 9rem 0 0 0;
       margin-left: 3rem;
       @media all and (min-width: $breakpoint) {
-        padding: 8rem 0 0 0;
+        padding: 7rem 0 0 0;
         margin-left: 8rem;
       }
     }

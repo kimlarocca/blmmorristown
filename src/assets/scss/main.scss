@@ -23,6 +23,11 @@ main {
 }
 
 // overrides
+.button {
+  font-family: var(--font-family-tertiary);
+  font-size: var(--font-size-7);
+}
+
 .content-blade a,
 .card .cta {
   font-weight: 600;
