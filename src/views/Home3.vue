@@ -2,7 +2,7 @@
   <div>
     <section class="home-hero"></section>
     <section class="l-container">
-      <h1><span>Join the movement,</span><span>fight for freedom</span></h1>
+      <h1>Join the movement</h1>
       <div class="u-align--center"><a class="button arrow">how to join</a></div>
     </section>
     <v-spacer size="quin"/>
@@ -87,7 +87,7 @@
     min-height: calc(100vh - 10rem);
     position: relative;
     @media all and (min-width: $breakpoint) {
-      min-height: calc(100vh - 6rem);
+      min-height: calc(100vh - 10rem);
     }
 
     .container {
@@ -106,12 +106,12 @@
     transform: rotate(-5deg);
     font-size: 4rem;
     line-height: 4rem;
-    margin-top: -.75rem;
+    margin-top: -1rem;
 
     @media all and (min-width: $breakpoint) {
-      font-size: 5rem;
-      line-height: 5rem;
-      margin-bottom: 4rem;
+      font-size: 4.5rem;
+      line-height: 4.5rem;
+      margin-bottom: 3rem;
     }
 
     span {

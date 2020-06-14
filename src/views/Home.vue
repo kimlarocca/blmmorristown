@@ -119,7 +119,7 @@
   .hero {
     z-index: 10;
     position: absolute;
-    background: url('/img/hero1.jpg') no-repeat center center;
+    background: url('/img/hero1.jpg') no-repeat bottom right;
     top: 4rem;
     right: -3rem;
     height: calc(100vh - 12rem);
