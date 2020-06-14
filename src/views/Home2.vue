@@ -1,13 +1,10 @@
 <template>
   <div>
     <section class="home-hero">
-      <div class="container">
-        <h1>Join the movement, fight for freedom</h1>
-        <a class="button arrow">how to join</a>
-      </div>
       <div class="hero"></div>
+      <h1><span>Join the movement,</span><span>fight for freedom</span></h1>
     </section>
-    <v-spacer size="quin"/>
+    <v-spacer size="sept"/>
     <section class="l-container">
       <content-blade
         title="Real Talk Matters"
@@ -87,53 +84,43 @@
     @media all and (min-width: $breakpoint) {
       min-height: calc(100vh - 6rem);
     }
-
-    .container {
-      padding: 9rem 0 0 0;
-      margin-left: 3rem;
-      @media all and (min-width: $breakpoint) {
-        padding: 10rem 0 0 0;
-        margin-left: 8rem;
-      }
-    }
-
-    h1 {
-      position: relative;
-      z-index: 20;
-      transform: rotate(-5deg);
-      color: var(--color-white);
-      text-shadow: 2px 2px 15px var(--color-black);
-      font-size: 4rem;
-      line-height: 4rem;
-      margin-bottom: 3rem;
-      max-width: 768px;
-
-      @media all and (min-width: $breakpoint) {
-        font-size: 4rem;
-        line-height: 4rem;
-        margin-bottom: 4rem;
-      }
-    }
   }
 
   .hero {
     z-index: 10;
     position: absolute;
-    background: url('/img/hero1.jpg') no-repeat center center;
-    top: 4rem;
+    background: url('/img/hero2.jpg') no-repeat center center;
+    top: 4.1rem;
     right: -3rem;
     height: calc(100vh - 12rem);
-    left: 7rem;
+    left: 8.25rem;
     width: 100vw;
     background-size: cover;
-
-    @media all and (min-width: $breakpoint) {
-      left: 10.5rem;
-    }
   }
 
-  .button {
-    position: relative;
-    z-index: 30;
+  h1 {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    bottom: -5rem;
+    left: 5rem;
+    transform: rotate(-5deg);
+    color: var(--color-white);
+    text-shadow: 3px 3px 10px var(--color-black);
+    font-size: 4rem;
+    line-height: 4rem;
+
+    @media all and (min-width: $breakpoint) {
+      font-size: 4rem;
+      line-height: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    span {
+      display: block;
+      &:last-child {
+        margin-left: 8rem;
+      }
+    }
   }
 </style>

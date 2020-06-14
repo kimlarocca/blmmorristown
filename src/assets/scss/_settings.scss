@@ -3,9 +3,9 @@
   --color-white: #ffffff;
   --color-black: #000000;
   --color-dark-gray: #333333;
-  --color-gray: #afafaf;
-  --color-light-gray: #f3f3f3;
-  --color-primary: #fce21b;
+  --color-gray: #b5b5b5;
+  --color-light-gray: #f0f0f0;
+  --color-primary: #fbe039;
   --color-secondary: #4a44f2;
   --color-tertiary: #00ffc4;
   --color-quaternary: #fc6a1b;
@@ -140,7 +140,7 @@
   --color-text: var(--color-black);
   --color-background: var(--color-white);
   --font-family: var(--font-family-primary);
-  --color-hr: var(--color-black);
+  --color-hr: var(--color-gray);
   --hr-height: 1px;
 
   // Links

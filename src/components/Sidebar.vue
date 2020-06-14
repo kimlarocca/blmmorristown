@@ -1,8 +1,8 @@
 <template>
   <section class="sidebar">
     <img class="u-space--bottom"
-         src="https://images.unsplash.com/photo-1591155426209-23831d47700d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"
-         alt="black lives matter events in morristown nj"/>
+         src="/img/sidebar-image.jpg"
+         alt="black lives matter protest in morristown nj"/>
     <div class="u-background-color--gray--light u-padding--double u-space--bottom">
       <h3 class="u-align--center u-space--bottom">Upcoming Events</h3>
       <p><a href="/Events">Visit our events page</a> and join us at our next gathering in the Morristown area!</p>

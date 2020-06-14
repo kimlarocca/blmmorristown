@@ -1,11 +1,9 @@
 <template>
   <div>
-    <section class="home-hero">
-      <div class="container">
-        <h1>Join the movement, fight for freedom</h1>
-        <a class="button arrow">how to join</a>
-      </div>
-      <div class="hero"></div>
+    <section class="home-hero"></section>
+    <section class="l-container">
+      <h1><span>Join the movement,</span><span>fight for freedom</span></h1>
+      <div class="u-align--center"><a class="button arrow">how to join</a></div>
     </section>
     <v-spacer size="quin"/>
     <section class="l-container">
@@ -80,8 +78,12 @@
 <style lang="scss" scoped>
   $breakpoint: 1000px;
 
+  .button.donate {
+    display: none;
+  }
+
   .home-hero {
-    background: var(--color-primary);
+    background: url('/img/hero3.jpg') no-repeat center center;
     min-height: calc(100vh - 10rem);
     position: relative;
     @media all and (min-width: $breakpoint) {
@@ -89,51 +91,35 @@
     }
 
     .container {
-      padding: 9rem 0 0 0;
+      padding: 12rem 0 0 0;
       margin-left: 3rem;
       @media all and (min-width: $breakpoint) {
-        padding: 10rem 0 0 0;
+        padding: 7rem 0 0 0;
         margin-left: 8rem;
       }
     }
-
-    h1 {
-      position: relative;
-      z-index: 20;
-      transform: rotate(-5deg);
-      color: var(--color-white);
-      text-shadow: 2px 2px 15px var(--color-black);
-      font-size: 4rem;
-      line-height: 4rem;
-      margin-bottom: 3rem;
-      max-width: 768px;
-
-      @media all and (min-width: $breakpoint) {
-        font-size: 4rem;
-        line-height: 4rem;
-        margin-bottom: 4rem;
-      }
-    }
   }
 
-  .hero {
-    z-index: 10;
-    position: absolute;
-    background: url('/img/hero1.jpg') no-repeat center center;
-    top: 4rem;
-    right: -3rem;
-    height: calc(100vh - 12rem);
-    left: 7rem;
-    width: 100vw;
-    background-size: cover;
+  h1 {
+    position: relative;
+    z-index: 20;
+    transform: rotate(-5deg);
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-top: -.75rem;
 
     @media all and (min-width: $breakpoint) {
-      left: 10.5rem;
+      font-size: 5rem;
+      line-height: 5rem;
+      margin-bottom: 4rem;
     }
-  }
 
-  .button {
-    position: relative;
-    z-index: 30;
+    span {
+      display: block;
+
+      &:last-child {
+        margin-left: 8rem;
+      }
+    }
   }
 </style>
