@@ -6,13 +6,15 @@
     <section class="l-container">
       <div class="l-grid l-grid--4x1 l-grid--1up--small l-grid--large-gutters">
         <div>
+          <h2>#BlackLivesMatter</h2>
+          <br>
           <p>#BlackLivesMatter was founded in 2013 in response to the acquittal of Trayvon Martin’s murderer. Black Lives
             Matter Foundation, Inc is a global organization in the US, UK, and Canada, whose mission is to eradicate white
             supremacy and build local power to intervene in violence inflicted on Black communities by the state and
             vigilantes. By combating and countering acts of violence, creating space for Black imagination and innovation,
             and centering Black joy, we are winning immediate improvements in our lives.</p>
           <br>
-          <h2>Mission Statement</h2>
+          <h3>Mission Statement</h3>
           <br>
           <p><strong>We are expansive.</strong> We are a collective of liberators who believe in an inclusive and spacious
             movement. We also believe that in order to win and bring as many people with us along the way, we must move beyond the narrow

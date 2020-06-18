@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <section class="home-hero">
-      <div class="container">
-        <h1>Join the movement, fight for freedom</h1>
-        <a class="button arrow">how to join</a>
-      </div>
-      <div class="hero"></div>
+  <div class="home">
+    <section class="home-hero"></section>
+    <section class="l-container">
+      <h1><span>Join the movement,</span><span>fight for freedom</span></h1>
+      <div class="u-align--center"><a class="button arrow">how to join</a></div>
     </section>
     <v-spacer size="quin"/>
     <section class="l-container">
-      <content-blade
+      <content-card
         title="Real Talk Matters"
         link="/RealTalkMatters"
         cta="Learn more about Real Talk Matters"
@@ -19,11 +17,10 @@
       >
         <template slot="content">
           <p class="u-space--bottom">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquam aperiam debitis delectus doloribus est
-            in, magni nemo nihil quaerat qui quidem quo unde? Beatae eos minima quaerat repellendus ullam!
+            Focusing on issues concerning racial injustice, police brutality, criminal justice reform, Black immigration, economic injustice, LGBTQIA+ and human rights, environmental injustice, access to healthcare, access to quality education, and voting rights and suppression.
           </p>
         </template>
-      </content-blade>
+      </content-card>
     </section>
     <v-spacer size="quin"/>
     <div class="l-container">
@@ -31,31 +28,32 @@
     </div>
     <v-spacer size="quin"/>
     <section class="l-container">
-      <h2 class="u-space--double--bottom u-align--center">Local News</h2>
+      <h2 class="u-space--double--bottom u-align--center">National News</h2>
       <div class="l-grid l-grid--3up">
         <card
-          image="https://picsum.photos/768/400?grayscale"
-          altText="alternative text"
-          subtitle="News Title"
+          image="https://blacklivesmatter.com/wp-content/uploads/2020/06/blmgn-news-juneteenth-national-holiday-061720-1000x750-01-400x300.jpg"
+          altText="Make Juneteenth a National Holiday"
+          subtitle="Make Juneteenth a National Holiday"
           :hasTextLink="true"
           cta="Read More"
-          description="Short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          link="https://blacklivesmatter.com/make-juneteenth-a-national-holiday/"
+          description="Now more than ever, we must highlight and celebrate the rich history of our community and our culture. In the last few days, cities and companies across the country have declared Juneteenth a holiday. Just like our lives, our HISTORY matters, including why Juneteenth is rooted in joy and is a call for liberation for the Black community."
         />
         <card
-          image="https://picsum.photos/768/400?grayscale"
-          altText="alternative text"
-          subtitle="News Title"
+          image="https://blacklivesmatter.com/wp-content/uploads/2020/06/blmgn-news-bet-house-party-deepak-chopra-061520-1000x750-01-400x300.jpg"
+          altText="Black Lives Matter Global Network"
+          subtitle="Black Lives Matter Global Network Partners with BET House Party to Speak with Deepak Chopra, M.D."
           :hasTextLink="true"
           cta="Read More"
-          description="Short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          description="The taping of the program was completed prior to the killing of George Floyd. The original BET air date was May 29, 2020. Black Lives Matter Global Network Managing Director, Kailee Scales is joined by renowned physician, author, and philosopher, Deepak Chopra, M.D. to discuss how our minds effect our health and share ways to calm ourselves."
         />
         <card
-          image="https://picsum.photos/768/400?grayscale"
-          altText="alternative text"
-          subtitle="News Title"
+          image="https://blacklivesmatter.com/wp-content/uploads/2020/06/blmgn-news-fund-organizing-work-061120-1000x750-01-400x300.jpg"
+          altText="Black Lives Matter Global Network"
+          subtitle="Black Lives Matter Global Network Foundation Announces $6.5 Million Fund to Support Organizing Work"
           :hasTextLink="true"
           cta="Read More"
-          description="Short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+          description="Black Lives Matter Global Network Foundation (BLM Global Network Foundation), a US nonprofit global organization active in the US, UK, and Canada is grateful for the generosity and support of donors and is pleased to announce a $6.5 million fund to support grassroots organizing work."
         />
       </div>
     </section>
@@ -63,14 +61,14 @@
 </template>
 
 <script>
-  import ContentBlade from 'vue-evolve/src/components/ContentBlade'
+  import ContentCard from 'vue-evolve/src/components/ContentCard'
   import VSpacer from 'vue-evolve/src/components/VSpacer'
   import Card from 'vue-evolve/src/components/Card'
 
   export default {
     name: 'Home',
     components: {
-      ContentBlade,
+      ContentCard,
       VSpacer,
       Card
     }
@@ -78,62 +76,50 @@
 </script>
 
 <style lang="scss" scoped>
-  $breakpoint: 1000px;
+  @import "src/assets/scss/breakpoints";
 
   .home-hero {
-    background: var(--color-primary);
-    min-height: calc(100vh - 10rem);
-    position: relative;
-    @media all and (min-width: $breakpoint) {
-      min-height: calc(100vh - 6rem);
-    }
-
-    .container {
-      padding: 9rem 0 0 0;
-      margin-left: 3rem;
-      @media all and (min-width: $breakpoint) {
-        padding: 10rem 0 0 0;
-        margin-left: 8rem;
-      }
-    }
-
-    h1 {
-      position: relative;
-      z-index: 20;
-      transform: rotate(-5deg);
-      color: var(--color-white);
-      text-shadow: 2px 2px 15px var(--color-black);
-      font-size: 4rem;
-      line-height: 4rem;
-      margin-bottom: 3rem;
-      max-width: 768px;
-
-      @media all and (min-width: $breakpoint) {
-        font-size: 4rem;
-        line-height: 4rem;
-        margin-bottom: 4rem;
-      }
+    background: url('/img/hero-small.jpg') no-repeat top right;
+    min-height: 640px;
+    @media all and (min-width: $medium) {
+      background: url('/img/hero.jpg') no-repeat top right;
+      min-height: 900px;
     }
   }
 
-  .hero {
-    z-index: 10;
-    position: absolute;
-    background: url('/img/hero1.jpg') no-repeat bottom right 75px;
-    top: 4rem;
-    right: -3rem;
-    height: calc(100vh - 12rem);
-    left: 7rem;
-    width: 100vw;
-    background-size: cover;
-
-    @media all and (min-width: $breakpoint) {
-      left: 10.5rem;
-    }
-  }
-
-  .button {
+  .home h1 {
     position: relative;
-    z-index: 30;
+    z-index: 20;
+    transform: rotate(-10deg);
+    margin: -.5rem 1rem 2.5rem auto;
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+
+    @media all and (min-width: $medium) {
+      text-align: left;
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+
+    @media all and (min-width: $large) {
+      margin: -2rem 0 3rem 4rem;
+      font-size: 4.5rem;
+      line-height: 4.5rem;
+    }
+
+    span {
+
+      &:last-child {
+        margin-left: 1rem;
+        @media all and (min-width: $medium) {
+          display: block;
+          margin-left: 3rem;
+        }
+        @media all and (min-width: $large) {
+          margin-left: 8rem;
+        }
+      }
+    }
   }
 </style>

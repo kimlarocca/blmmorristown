@@ -48,7 +48,7 @@
       @media all and (min-width: $medium) {
         font-size: 4rem;
         color: var(--color-white);
-        text-shadow: 0 0 20px var(--color-dark-gray);
+        text-shadow: 1px 5px 20px var(--color-black);
       }
     }
 

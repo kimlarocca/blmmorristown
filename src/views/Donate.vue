@@ -6,11 +6,14 @@
     <section class="l-container">
       <div class="l-grid l-grid--4x1 l-grid--1up--small l-grid--large-gutters">
         <div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, assumenda consectetur dolores doloribus excepturi fugiat illum labore laboriosam magni modi nemo obcaecati officia provident recusandae, tempore totam vel velit! Debitis!</p>
-          <br>
           <h2>Fundraisers</h2>
           <br>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab magni, modi mollitia necessitatibus quod quos saepe tempore unde veritatis voluptates. Ab alias corporis laborum non officia quaerat rerum, sequi tempora!</p>
+          <p>We hold local fundraisers often. Please check back soon for our next one!</p>
+          <br>
+          <br>
+          <p>We appreciate your support of the movement and our ongoing fight to end state-sanctioned violence, liberate Black people, and end white supremacy forever.</p>
+          <br>
+          <a class="button" href="https://secure.actblue.com/donate/ms_blm_homepage_2019">Donate to BLM</a>
         </div>
         <sidebar/>
       </div>

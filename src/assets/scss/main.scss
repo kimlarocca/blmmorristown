@@ -9,9 +9,10 @@
 @import "~vue-evolve/src/assets/scss/main";
 @import "settings";
 @import "breakpoints";
+@import "transitions";
 
 main {
-  margin: 1rem;
+  margin: 0 1rem 1rem 1rem;
   @media all and (min-width: $medium) {
     margin: 2rem;
     min-height: calc(100vh - 4rem);
@@ -45,4 +46,16 @@ main {
   @extend h4;
   font-weight: 400;
   margin-bottom: .5rem;
+}
+
+.card img {
+  width: 100%;
+}
+
+// extending the grid system
+
+.l-grid--2up--small {
+  @media all and (max-width: $medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

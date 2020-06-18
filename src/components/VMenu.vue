@@ -4,45 +4,47 @@
       <a href="/Donate" class="button donate">donate</a>
       <i @click="menuOpen = true" class="fas fa-bars"></i>
     </div>
-    <nav :class="{'open': menuOpen}" class="u-padding--double">
-      <div class="close u-align--right"><i @click="menuOpen = false" class="fas fa-times"></i></div>
-      <ul class="menu-links u-space--double--bottom">
-        <li v-for="(link, index) in navigation" :key="index">
-          <a :href="link.url">{{link.name}}</a>
-        </li>
-      </ul>
-      <ul class="social-links">
-        <social-link
-          icon="fab fa-facebook-f"
-          link="https://www.facebook.com"
-          label="facebook">
-        </social-link>
-        <social-link
-          icon="fab fa-twitter"
-          link="https://www.twitter.com"
-          label="twitter"
-        >
-        </social-link>
-        <social-link
-          icon="fab fa-youtube"
-          link="https://www.youtube.com"
-          label="youtube"
-        >
-        </social-link>
-        <social-link
-          icon="fab fa-instagram"
-          link="https://www.instagram.com"
-          label="instagram"
-        >
-        </social-link>
-        <social-link
-          icon="fab fa-linkedin-in"
-          link="https://www.linkedin.com"
-          label="linkedin"
-        >
-        </social-link>
-      </ul>
-    </nav>
+    <transition name="slide-fade">
+      <nav v-if="menuOpen" class="u-padding--double">
+        <div class="close u-align--right"><i @click="menuOpen = false" class="fas fa-times"></i></div>
+        <ul class="menu-links u-space--double--bottom">
+          <li v-for="(link, index) in navigation" :key="index">
+            <a :href="link.url">{{link.name}}</a>
+          </li>
+        </ul>
+        <ul class="social-links">
+          <social-link
+            icon="fab fa-facebook-f"
+            link="https://www.facebook.com"
+            label="facebook">
+          </social-link>
+          <social-link
+            icon="fab fa-twitter"
+            link="https://www.twitter.com"
+            label="twitter"
+          >
+          </social-link>
+          <social-link
+            icon="fab fa-youtube"
+            link="https://www.youtube.com"
+            label="youtube"
+          >
+          </social-link>
+          <social-link
+            icon="fab fa-instagram"
+            link="https://www.instagram.com"
+            label="instagram"
+          >
+          </social-link>
+          <social-link
+            icon="fab fa-linkedin-in"
+            link="https://www.linkedin.com"
+            label="linkedin"
+          >
+          </social-link>
+        </ul>
+      </nav>
+    </transition>
   </div>
 </template>
 
@@ -63,18 +65,14 @@
 </script>
 
 <style lang="scss" scoped>
-  $menuWidth: 300px;
   @import "src/assets/scss/breakpoints";
 
   .menu {
     position: absolute;
     top: 1rem;
-    right: 2.5rem;
+    right: 2rem;
     display: flex;
     @media all and (min-width: $medium) {
-      right: 3.5rem;
-    }
-    @media all and (min-width: $large) {
       right: 4.5rem;
     }
 
@@ -87,22 +85,16 @@
 
   nav {
     position: absolute;
-    top: -1rem;
+    top: -3rem;
     bottom: 0;
-    right: -$menuWidth;
+    right: 0;
     min-height: 100vh;
     height: 100%;
-    width: $menuWidth;
+    width: 300px;
     color: var(--color-white);
     font-weight: 600;
     background: var(--color-black);
     transition: var(--transition);
-    @media all and (min-width: $medium) {
-      top: -2rem;
-    }
-    @media all and (min-width: $large) {
-      top: -3rem;
-    }
 
     a,
     a:visited,
@@ -136,9 +128,16 @@
     }
   }
 
-  .donate {
+  .button.donate {
     margin-right: 1.5rem;
     padding: .25rem 1.5rem;
     line-height: 1.45rem;
+    background: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+    color: var(--color-white);
+    &:hover {
+      border: 2px solid var(--color-secondary);
+      color: var(--color-secondary);
+    }
   }
 </style>

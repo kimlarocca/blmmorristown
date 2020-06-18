@@ -3,27 +3,33 @@
     <secondary-page-hero title="Gallery"/>
     <v-spacer size="quad" class="u-hide-until--m"/>
     <v-spacer size="quad"/>
+    <p></p>
     <section class="l-container">
-      <div class="l-grid l-grid--4up">
-        <card
-          image="https://picsum.photos/768/400?grayscale"
-          altText="alternative text"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+      <div class="l-grid l-grid--3up">
+        <image-with-caption
+          image="/img/gallery/1.jpg"
+          alt-text="photo of black lives matter morristown nj"
+          caption="by john doe"
         />
-        <card
-          image="https://picsum.photos/768/400?grayscale"
-          altText="alternative text"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+        <image-with-caption
+          image="/img/gallery/2.jpg"
+          alt-text="photo of black lives matter morristown nj"
         />
-        <card
-          image="https://picsum.photos/768/400?grayscale"
-          altText="alternative text"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+        <image-with-caption
+          image="/img/gallery/6.jpg"
+          alt-text="photo of black lives matter morristown nj"
         />
-        <card
-          image="https://picsum.photos/768/400?grayscale"
-          altText="alternative text"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+        <image-with-caption
+          image="/img/gallery/4.jpg"
+          alt-text="photo of black lives matter morristown nj"
+        />
+        <image-with-caption
+          image="/img/gallery/3.jpg"
+          alt-text="photo of black lives matter morristown nj"
+        />
+        <image-with-caption
+          image="/img/gallery/5.jpg"
+          alt-text="photo of black lives matter morristown nj"
         />
       </div>
     </section>
@@ -33,14 +39,14 @@
 <script>
   import SecondaryPageHero from '../components/SecondaryPageHero'
   import VSpacer from 'vue-evolve/src/components/VSpacer'
-  import Card from 'vue-evolve/src/components/Card'
+  import ImageWithCaption from 'vue-evolve/src/components/ImageWithCaption'
 
   export default {
     name: 'Events',
     components: {
       SecondaryPageHero,
       VSpacer,
-      Card
+      ImageWithCaption
     }
   }
 </script>

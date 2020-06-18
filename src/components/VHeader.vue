@@ -22,22 +22,24 @@
   header {
     position: relative;
     z-index: 100;
-    background: var(--color-primary);
   }
 
   .logo {
     position: absolute;
-    top: -18px;
-    left: 1rem;
+    top: 0;
+    left: 0;
     background: white;
     width: 100px;
     height: 110px;
     display: flex;
     padding: 1rem;
     @media all and (min-width: $medium) {
-      top: 0;
+      left: 0;
       width: 150px;
       height: 175px;
+    }
+    @media all and (min-width: $large) {
+      left: 1rem;
     }
   }
 </style>

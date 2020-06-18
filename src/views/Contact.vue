@@ -6,7 +6,8 @@
     <section class="l-container">
       <div class="l-grid l-grid--4x1 l-grid--1up--small l-grid--large-gutters">
         <div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab magni, modi mollitia necessitatibus quod quos saepe tempore unde veritatis voluptates. Ab alias corporis laborum non officia quaerat rerum, sequi tempora!</p>
+          <h2 class="u-space--bottom">Want to help?</h2>
+          <p>Please contact us at <a href="mailto:blmmorristown@gmail.com">blmmorristown @ gmail.com</a></p>
         </div>
         <sidebar/>
       </div>

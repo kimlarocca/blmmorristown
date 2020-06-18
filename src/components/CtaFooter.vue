@@ -2,7 +2,7 @@
   <section
     class="cta-footer u-background-color--gray--light u-padding--quad--top u-padding--quad--bottom u-align--center">
     <h3 class="u-align--center u-space--double--bottom">Take Action Today</h3>
-    <div class="l-container l-grid l-grid--4up">
+    <div class="l-container l-grid l-grid--4up l-grid--2up--small">
       <a href="https://blacklivesmatter.com/register-to-vote/" class="cta u-background-color--primary u-padding">
         <h4>Register<br>To Vote</h4>
       </a>

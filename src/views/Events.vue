@@ -4,36 +4,18 @@
     <v-spacer size="quad" class="u-hide-until--m"/>
     <v-spacer size="quad"/>
     <section class="l-container">
-      <content-blade
-        title="Title"
-        link="http://www.google.com"
-        cta="check this out"
-        image="https://picsum.photos/768/400?grayscale"
+      <content-card
+        title="Juneteenth March & Rally"
+        image="/img/sidebar-image.jpg"
         layout="1x4"
+        link="https://www.instagram.com/p/CBiyVchsPUh/"
+        cta="learn more"
         class="u-space--double--bottom"
       >
         <template slot="content">
-          <p>Proin non vehicula ante. Morbi ornare, est ac euismod ultricies, ex ante lacinia
-            lacus, in mollis neque velit a lorem. Nulla feugiat sem vel augue varius tincidunt. Quisque
-            ultrices
-          </p>
+          <p>Come out and celebrate black excellence while fighting for our rights on OUR Independence Day. June 15th, Boonton 5pm.</p>
         </template>
-      </content-blade>
-      <content-blade
-        title="Title"
-        link="http://www.google.com"
-        cta="check this out"
-        image="https://picsum.photos/768/400?grayscale"
-        layout="1x4"
-        class="u-space--double--bottom"
-      >
-        <template slot="content">
-          <p>Proin non vehicula ante. Morbi ornare, est ac euismod ultricies, ex ante lacinia
-            lacus, in mollis neque velit a lorem. Nulla feugiat sem vel augue varius tincidunt. Quisque
-            ultrices
-          </p>
-        </template>
-      </content-blade>
+      </content-card>
     </section>
   </div>
 </template>
@@ -41,14 +23,14 @@
 <script>
   import SecondaryPageHero from '../components/SecondaryPageHero'
   import VSpacer from 'vue-evolve/src/components/VSpacer'
-  import ContentBlade from 'vue-evolve/src/components/ContentBlade'
+  import ContentCard from 'vue-evolve/src/components/ContentCard'
 
   export default {
     name: 'Events',
     components: {
       SecondaryPageHero,
       VSpacer,
-      ContentBlade
+      ContentCard
     }
   }
 </script>

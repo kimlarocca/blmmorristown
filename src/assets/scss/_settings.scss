@@ -6,10 +6,10 @@
   --color-gray: #b5b5b5;
   --color-light-gray: #f0f0f0;
   --color-primary: #fbe039;
-  --color-secondary: #4a44f2;
-  --color-tertiary: #00ffc4;
-  --color-quaternary: #fc6a1b;
-  --color-quinary: #f244e1;
+  --color-secondary: #9129d4;
+  --color-tertiary: #f16743;
+  --color-quaternary: #e3cc37;
+  --color-quinary: #e3cc37;
 
   // Fonts
   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;600&family=Rock+Salt&display=swap");
@@ -128,7 +128,7 @@
   --space-11: calc(var(--space-10) + var(--spacing-increment));
 
   // Layout
-  --max-width: 1240px;
+  --max-width: 1440px;
   --grid-gutter: 24px;
   --grid-gutter-large: 72px;
 
