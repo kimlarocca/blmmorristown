@@ -7,7 +7,7 @@
       <div class="l-grid l-grid--4x1 l-grid--1up--small l-grid--large-gutters">
         <div>
           <h2 class="u-space--bottom">Coming Soon</h2>
-          <p>Local resources are coming soon! In the meantime, <a href="https://blacklivesmatter.com/resources/" target="_blank">click here to visit Black Lives Matter's resources page</a>.</p>
+          <p>Local resources are coming soon!<br><br>In the meantime, <a href="https://blacklivesmatter.com/resources/" target="_blank">click here to visit Black Lives Matter's resources page</a>.</p>
         </div>
         <sidebar/>
       </div>

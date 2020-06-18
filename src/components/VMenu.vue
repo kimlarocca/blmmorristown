@@ -85,7 +85,7 @@
 
   nav {
     position: absolute;
-    top: -3rem;
+    top: 0;
     bottom: 0;
     right: 0;
     min-height: 100vh;
@@ -95,6 +95,10 @@
     font-weight: 600;
     background: var(--color-black);
     transition: var(--transition);
+
+    @media all and (min-width: $medium) {
+      top: -3rem;
+    }
 
     a,
     a:visited,

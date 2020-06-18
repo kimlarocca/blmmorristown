@@ -6,7 +6,7 @@
     <section class="l-container">
       <div class="l-grid l-grid--4x1 l-grid--1up--small l-grid--large-gutters">
         <div>
-          <h2>#BlackLivesMatter</h2>
+          <h2>Black Lives Matter</h2>
           <br>
           <p>#BlackLivesMatter was founded in 2013 in response to the acquittal of Trayvon Martin’s murderer. Black Lives
             Matter Foundation, Inc is a global organization in the US, UK, and Canada, whose mission is to eradicate white

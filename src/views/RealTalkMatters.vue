@@ -6,7 +6,7 @@
     <section class="l-container">
       <div class="l-grid l-grid--4x1 l-grid--1up--small l-grid--large-gutters">
         <div>
-          <h2 class="u-space--bottom">#WhatMatters2020</h2>
+          <h2 class="u-space--bottom">What Matters 2020</h2>
           <media-block url="https://player.vimeo.com/video/393348113" class="u-space--bottom"/>
           <p class="u-space--bottom">BLM’s #WhatMatters2020 is a campaign aimed to maximize the impact of the BLM movement by galvanizing BLM supporters and allies to the polls in the 2020 U.S Presidential Election to build collective power and ensure candidates are held accountable for the issues that systematically and disproportionately impact Black and under-served communities across the nation.</p>
           <p class="u-space--bottom">BLM’s #WhatMatters2020 will focus on issues concerning racial injustice, police brutality, criminal justice reform, Black immigration, economic injustice, LGBTQIA+ and human rights, environmental injustice, access to healthcare, access to quality education, and voting rights and suppression.</p>
