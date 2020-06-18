@@ -54,7 +54,7 @@
 
     .hero {
       position: absolute;
-      background: url(/img/secondary-hero.jpg) no-repeat;
+      background: url(/img/secondary-hero.jpg) no-repeat center right;
       top: 4rem;
       right: -3rem;
       height: 200px;
