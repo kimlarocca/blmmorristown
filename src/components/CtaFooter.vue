@@ -10,7 +10,7 @@
         <h4>Attend<br>An Event</h4>
       </a>
       <a href="https://mailchi.mp/124a0dc66c91/join-our-mailing-list" target="_blank" class="cta u-background-color--primary u-padding">
-        <h4>Join Our<br>Mailing List</h4>
+        <h4>Mailing<br> List</h4>
       </a>
       <a href="https://paypal.me/blmmorristown" target="_blank" class="cta u-background-color--primary u-padding">
         <h4>Donate<br>to BLM</h4>
