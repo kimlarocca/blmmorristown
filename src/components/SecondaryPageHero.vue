@@ -30,6 +30,7 @@
 
     .container {
       @media all and (min-width: $medium) {
+        padding-top: 4.1rem;
         background: var(--color-primary);
         margin-left: 12rem;
       }
