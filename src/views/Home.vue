@@ -3,7 +3,7 @@
     <section class="home-hero"></section>
     <section class="l-container">
       <h1><span>Join the movement,</span><span>fight for freedom</span></h1>
-      <div class="u-align--center"><a class="button arrow">how to join</a></div>
+      <div class="u-align--center"><a class="button arrow" href="/Contact">how to join</a></div>
     </section>
     <v-spacer size="quin"/>
     <section class="l-container">
@@ -17,7 +17,9 @@
       >
         <template slot="content">
           <p class="u-space--bottom">
-            Focusing on issues concerning racial injustice, police brutality, criminal justice reform, Black immigration, economic injustice, LGBTQIA+ and human rights, environmental injustice, access to healthcare, access to quality education, and voting rights and suppression.
+            Focusing on issues concerning racial injustice, police brutality, criminal justice reform, Black
+            immigration, economic injustice, LGBTQIA+ and human rights, environmental injustice, access to healthcare,
+            access to quality education, and voting rights and suppression.
           </p>
         </template>
       </content-card>
@@ -77,6 +79,13 @@
 
 <style lang="scss" scoped>
   @import "src/assets/scss/breakpoints";
+
+  .home {
+    margin-top: -60px;
+    @media all and (min-width: $medium) {
+      margin-top: 0;
+    }
+  }
 
   .home-hero {
     background: url('/img/hero-small.jpg') no-repeat top right;
