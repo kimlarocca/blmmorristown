@@ -3,7 +3,7 @@
     <section class="secondary-page">
       <div class="container">
         <h1 class="u-hide-until--m">{{ title }}</h1>
-        <div class="hero u-hide-until--m"></div>
+        <div class="hero"></div>
       </div>
       <h1 class="u-hide-after--m">{{ title }}</h1>
     </section>
@@ -29,10 +29,8 @@
     }
 
     .container {
-      background: var(--color-primary);
-      padding: 4.1rem 0 0 0;
-      margin-left: 6rem;
       @media all and (min-width: $medium) {
+        background: var(--color-primary);
         margin-left: 12rem;
       }
     }
@@ -44,7 +42,7 @@
       font-size: 3rem;
       line-height: 3rem;
       color: var(--color-black);
-      margin: 2rem 0 0 1rem;
+      margin: 1rem 0 0 1rem;
       @media all and (min-width: $medium) {
         font-size: 4rem;
         color: var(--color-white);
@@ -53,14 +51,17 @@
     }
 
     .hero {
-      position: absolute;
-      background: url(/img/secondary-hero.jpg) no-repeat center right;
-      top: 4rem;
-      right: -3rem;
+      position: relative;
       height: 200px;
-      left: 8rem;
-      width: 100vw;
-      background-size: cover;
+      background: url(/img/secondary-hero.jpg) no-repeat center right;
+      @media all and (min-width: $medium) {
+        position: absolute;
+        top: 4rem;
+        right: -3rem;
+        left: 8rem;
+        width: 100vw;
+        background-size: cover;
+      }
     }
   }
 </style>

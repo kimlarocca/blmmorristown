@@ -22,6 +22,9 @@
   header {
     position: relative;
     z-index: 100;
+    @media all and (max-width: $medium - 1) {
+      height: 55px;
+    }
   }
 
   .logo {

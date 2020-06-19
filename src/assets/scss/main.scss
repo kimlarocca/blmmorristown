@@ -12,7 +12,7 @@
 @import "transitions";
 
 main {
-  margin: 0 1rem 1rem 1rem;
+  margin: 0;
   @media all and (min-width: $medium) {
     margin: 2rem;
     min-height: calc(100vh - 4rem);
