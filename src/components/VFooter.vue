@@ -6,7 +6,7 @@
     <nav class="l-container u-align--center">
       <ul>
         <li v-for="(link, index) in navigation" :key="index">
-          <a :href="link.url">{{link.name}}</a>
+          <a :href="link.url" :target="link.target">{{link.name}}</a>
         </li>
       </ul>
     </nav>

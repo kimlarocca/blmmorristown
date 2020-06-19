@@ -2,39 +2,48 @@
   "navigation": [
     {
       "url": "/",
-      "name": "Home"
+      "name": "Home",
+      "target": "_parent"
     },
     {
       "url": "/About",
-      "name": "About Us"
+      "name": "About Us",
+      "target": "_parent"
     },
     {
       "url": "/RealTalkMatters",
-      "name": "Real Talk Matters"
+      "name": "Real Talk Matters",
+      "target": "_parent"
     },
     {
       "url": "/Resources",
-      "name": "Resources"
+      "name": "Resources",
+      "target": "_parent"
     },
     {
       "url": "/Events",
-      "name": "Events"
+      "name": "Events",
+      "target": "_parent"
     },
     {
       "url": "/Donate",
-      "name": "Fundraisers"
+      "name": "Fundraisers",
+      "target": "_parent"
     },
     {
       "url": "/Gallery",
-      "name": "Gallery"
+      "name": "Gallery",
+      "target": "_parent"
     },
     {
       "url": "/Contact",
-      "name": "Contact Us"
+      "name": "Contact Us",
+      "target": "_parent"
     },
     {
       "url": "https://mailchi.mp/124a0dc66c91/join-our-mailing-list",
-      "name": "Join Our Mailing List"
+      "name": "Join Our Mailing List",
+      "target": "_blank"
     }
   ]
 }

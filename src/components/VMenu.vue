@@ -9,7 +9,7 @@
         <div class="close u-align--right"><i @click="menuOpen = false" class="fas fa-times"></i></div>
         <ul class="menu-links u-space--double--bottom">
           <li v-for="(link, index) in navigation" :key="index">
-            <a :href="link.url">{{link.name}}</a>
+            <a :href="link.url" :target="link.target">{{link.name}}</a>
           </li>
         </ul>
         <ul class="social-links">
