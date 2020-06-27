@@ -42,7 +42,18 @@
   import ImageWithCaption from 'vue-evolve/src/components/ImageWithCaption'
 
   export default {
-    name: 'Events',
+    name: 'Gallery',
+    metaInfo () {
+      return {
+        title: 'Black Lives Matter Morristown | Gallery',
+        meta: [
+          {
+            name: 'description',
+            content: 'The website of the Morristown NJ chapter for Black Lives Matter.'
+          }
+        ]
+      }
+    },
     components: {
       SecondaryPageHero,
       VSpacer,

@@ -69,6 +69,17 @@
 
   export default {
     name: 'Home',
+    metaInfo () {
+      return {
+        title: 'Black Lives Matter Morristown',
+        meta: [
+          {
+            name: 'description',
+            content: 'The website of the Morristown NJ chapter for Black Lives Matter.'
+          }
+        ]
+      }
+    },
     components: {
       ContentCard,
       VSpacer,

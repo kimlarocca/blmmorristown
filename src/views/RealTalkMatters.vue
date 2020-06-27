@@ -26,6 +26,17 @@
 
   export default {
     name: 'RealTalkMatters',
+    metaInfo () {
+      return {
+        title: 'Black Lives Matter Morristown | Real Talk Matters',
+        meta: [
+          {
+            name: 'description',
+            content: 'The website of the Morristown NJ chapter for Black Lives Matter.'
+          }
+        ]
+      }
+    },
     components: {
       SecondaryPageHero,
       MediaBlock,

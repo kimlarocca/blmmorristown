@@ -103,7 +103,6 @@ const routes = [
     name: 'Contact',
     meta: {
       title: 'Black Lives Matter Morristown | Contact',
-      description: 'The website of the Morristown NJ chapter for Black Lives Matter.',
       layout: 'default'
     },
     // route level code-splitting
@@ -117,15 +116,6 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
-
-router.beforeEach((to, from, next) => {
-  // page titles
-  if (to.meta.title) {
-    document.title = to.meta.title
-    document.description = to.meta.description
-  }
-  next()
 })
 
 export default router

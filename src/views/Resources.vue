@@ -29,6 +29,17 @@
 
   export default {
     name: 'Resources',
+    metaInfo () {
+      return {
+        title: 'Black Lives Matter Morristown | Resources',
+        meta: [
+          {
+            name: 'description',
+            content: 'The website of the Morristown NJ chapter for Black Lives Matter.'
+          }
+        ]
+      }
+    },
     components: {
       SecondaryPageHero,
       Sidebar,
