@@ -1,0 +1,272 @@
+backend:
+  name: git-gateway
+  repo: kimlarocca/blmmorristown
+  branch: master
+
+publish_mode: editorial_workflow
+media_folder: 'storage/media'
+public_folder: 'storage/media'
+
+collections:
+  - name: "site-info"
+    label: "Site Info"
+    folder: "views" #TODO: make sure this is ok after linking to github
+    create: false
+    slug: "site-info-{{year}}-{{slug}}"
+    fields:
+      - {
+        name: "site-title",
+        label: "Site Title",
+        widget: "string",
+        required: true,
+        default: "BLM"
+      }
+      - {
+        name: "site-description",
+        label: "Site Description",
+        widget: "string",
+        required: true,
+        default: "Site Description"
+      }
+      - {
+        name: "logo",
+        label: "Logo",
+        widget: "image",
+        required: true,
+      }
+      - {
+        name: "logo-alt-text",
+        label: "Logo Alt Text",
+        widget: "string",
+        required: false,
+      }
+      - {
+        name: "footer-logo",
+        label: "Footer Logo",
+        widget: "image",
+        required: true,
+      }
+      - {
+        name: "fb-link",
+        label: "Facebook Link",
+        widget: "string",
+        required: false,
+      }
+      - {
+        name: "insta-link",
+        label: "Instagram Link",
+        widget: "string",
+        required: false,
+      }
+      - {
+        name: "youtube-link",
+        label: "Youtube Link",
+        widget: "string",
+        required: false,
+      }
+      - {
+        name: "twitter-link",
+        label: "Twitter Link",
+        widget: "string",
+        required: false,
+      }
+      - {
+        name: "donation-link",
+        label: "Donation Link",
+        widget: "string",
+        required: false,
+      }
+      - {
+        name: "mailchimp-link",
+        label: "Mailchimp Signup Link",
+        widget: "string",
+        required: false,
+      }
+  - name: "home"
+    label: "Home Page"
+    folder: "views"
+    create: false
+    slug: "home-{{year}}-{{slug}}"
+    fields:
+      - {
+        name: "home-h1",
+        label: "Main Headline",
+        widget: "string",
+        required: true,
+        default: "Join the movement, fight for freedom"
+      }
+      - {
+        name: "home-content",
+        label: "Home Content",
+        widget: "markdown",
+        required: true,
+        default: "Input text here"
+      }
+  - name: "real-talk-matters"
+    label: "Real Talk Matters Page"
+    folder: "views"
+    create: false
+    slug: "rtm-{{year}}-{{slug}}"
+    fields:
+      - {
+        name: "rtm-h1",
+        label: "RTM Headline",
+        widget: "string",
+        required: true,
+      }
+      - {
+        name: "rtm-content",
+        label: "RTM Content",
+        widget: "markdown",
+        required: true,
+      }
+  - name: "about"
+    label: "About Page"
+    folder: "views"
+    create: false
+    slug: "home-{{year}}-{{slug}}"
+    fields:
+      - {
+        name: "about-h1",
+        label: "About Headline",
+        widget: "string",
+        required: true,
+      }
+      - {
+        name: "about-content",
+        label: "About Content",
+        widget: "markdown",
+        required: true,
+      }
+  - name: "donate"
+    label: "Donate Page"
+    folder: "views"
+    create: false
+    slug: "donate-{{year}}-{{slug}}"
+    fields:
+      - {
+        name: "donate-h1",
+        label: "Donate Headline",
+        widget: "string",
+        required: true,
+      }
+      - {
+        name: "donate-content",
+        label: "Donate Content",
+        widget: "markdown",
+        required: true,
+      }
+  - name: "resources"
+    label: "Resources Page"
+    folder: "views"
+    create: false
+    slug: "resources-{{year}}-{{slug}}"
+    fields:
+      - {
+        name: "resources-h1",
+        label: "Resources Headline",
+        widget: "string",
+        required: true,
+      }
+      - {
+        name: "resources-content",
+        label: "Resources Content",
+        widget: "markdown",
+        required: true,
+      }
+  - name: "contact"
+    label: "Contact Page"
+    folder: "views"
+    create: false
+    slug: "contact-{{year}}-{{slug}}"
+    fields:
+      - {
+        name: "about-h1",
+        label: "About Headline",
+        widget: "string",
+        required: true,
+      }
+      - {
+        name: "about-content",
+        label: "About Content",
+        widget: "markdown",
+        required: true,
+      }
+  - name: "blog"
+    label: "Blog"
+    folder: "blog"
+    create: true
+    slug: "blog-{{year}}-{{day}}-{{slug}}"
+    fields:
+      - {
+        name: "post-title",
+        label: "Post Title",
+        widget: "string",
+        required: true,
+      }
+      - {
+        name: "post-image",
+        label: "Post Image",
+        widget: "image",
+        required: false,
+      }
+      - {
+        name: "post-image-caption",
+        label: "Post Image Caption",
+        widget: "string",
+        required: false,
+      }
+      - {
+        name: "post-image-alt-text",
+        label: "Post Image Alt Text",
+        widget: "string",
+        required: false,
+      }
+      - {
+        name: "post-date",
+        label: "Post Date",
+        widget: "datetime",
+        required: false,
+      }
+      - {
+        name: "post-author",
+        label: "Post Author",
+        widget: "string",
+        required: false,
+      }
+      - {
+        name: "post-desc",
+        label: "Post Short Description",
+        widget: "string",
+        required: false,
+      }
+      - {
+        name: "post-content",
+        label: "About Content",
+        widget: "markdown",
+        required: true,
+      }
+  - name: "gallery"
+    label: "Gallery Page"
+    folder: "gallery"
+    create: true
+    slug: "gallery-{{year}}-{{slug}}"
+    fields:
+      - {
+        name: "gal-image",
+        label: "Gallery Image",
+        widget: "image",
+        required: true,
+      }
+      - {
+        name: "gal-alt-text",
+        label: "Image Alt Text",
+        widget: "string",
+        required: false,
+      }
+      - {
+        name: "gal-caption",
+        label: "Image Caption",
+        widget: "string",
+        required: false,
+      }
