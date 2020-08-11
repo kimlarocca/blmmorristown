@@ -13,7 +13,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    alias: '/home',
+    alias: '/Home',
     meta: {
       title: 'Black Lives Matter Morristown',
       description: 'The website of the Morristown NJ chapter for Black Lives Matter.',
@@ -22,7 +22,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/About',
+    path: '/about',
     name: 'About',
     meta: {
       title: 'Black Lives Matter Morristown | About',

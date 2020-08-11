@@ -2,9 +2,11 @@
   <div class="home">
     <section class="home-hero"></section>
     <section class="l-container">
-      <h1><span>Join the movement,</span><span>fight for freedom</span></h1>
+<!--      <h1><span>Join the movement,</span><span>fight for freedom</span></h1>-->
+<!--      <h1>{{ header }}</h1>-->
       <div class="u-align--center"><a class="button arrow" href="/Contact">how to join</a></div>
     </section>
+    {{ header }}
     <v-spacer size="quin"/>
     <section class="l-container">
       <content-card
@@ -66,9 +68,16 @@
   import ContentCard from 'vue-evolve/src/components/ContentCard'
   import VSpacer from 'vue-evolve/src/components/VSpacer'
   import Card from 'vue-evolve/src/components/Card'
+  import storyblok from '../mixins/storyblok.mixin'
 
   export default {
     name: 'Home',
+    mixins: [storyblok],
+    data () {
+      return {
+        slug: 'Home'
+      }
+    },
     metaInfo () {
       return {
         title: 'Black Lives Matter Morristown',
@@ -84,12 +93,21 @@
       ContentCard,
       VSpacer,
       Card
+    },
+    computed: {
+      header () {
+        // return this.story.content.body[0].headline_h1
+        return this.story && this.story.content
+      },
+      body () {
+        return 'body'
+      }
     }
   }
 </script>
 
 <style lang="scss" scoped>
-  @import "src/assets/scss/breakpoints";
+  @import "../assets/scss/breakpoints";
 
   .home {
     margin-top: -60px;
