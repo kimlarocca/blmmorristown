@@ -5,16 +5,8 @@
     <v-spacer size="quad"/>
     <section class="l-container">
       <div class="l-grid l-grid--4x1 l-grid--1up--small l-grid--large-gutters">
-        <div>
-          <h2 class="u-space--bottom">Coming Soon</h2>
-          <p>Local resources are coming soon!</p>
-          <br><br>
-          <p>In the meantime, here are a few links to check out:</p>
-          <br>
-          <ul>
-            <li><a href="https://www.d4pa.org" target="_blank">database for police abolition</a></li>
-            <li><a href="https://blacklivesmatter.com/resources/" target="_blank">black lives matter resource page</a></li>
-          </ul>
+        <div class="rich-text">
+          <rich-text-renderer v-if="story.content.body[0].body" :document="story.content.body[0].body" />
         </div>
         <sidebar/>
       </div>
@@ -26,9 +18,16 @@
   import SecondaryPageHero from '../components/SecondaryPageHero'
   import Sidebar from '../components/Sidebar'
   import VSpacer from 'vue-evolve/src/components/VSpacer'
+  import storyblok from '../mixins/storyblok.mixin'
 
   export default {
     name: 'Resources',
+    mixins: [storyblok],
+    data () {
+      return {
+        slug: 'Resources'
+      }
+    },
     metaInfo () {
       return {
         title: 'Black Lives Matter Morristown | Resources',

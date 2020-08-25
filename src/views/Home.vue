@@ -2,29 +2,45 @@
   <div class="home">
     <section class="home-hero"></section>
     <section class="l-container">
-<!--      <h1><span>Join the movement,</span><span>fight for freedom</span></h1>-->
-<!--      <h1>{{ header }}</h1>-->
+      <h1>{{ story.content.body[0].headline_h1 }}</h1>
       <div class="u-align--center"><a class="button arrow" href="/Contact">how to join</a></div>
     </section>
-    {{ header }}
     <v-spacer size="quin"/>
     <section class="l-container">
       <content-card
-        title="Real Talk Matters"
-        link="/RealTalkMatters"
-        cta="Learn more about Real Talk Matters"
-        video="https://player.vimeo.com/video/393348113"
+        :title="story.content.body[1].title"
+        :link="story.content.body[1].bottom_link.cached_url"
+        :cta="story.content.body[1].bottom_link_copy"
+        :video="story.content.body[1].video.url"
+        :image="story.content.body[1].image.filename"
         altText="Real Talk Matters"
         verticalAlignment="middle"
       >
         <template slot="content">
           <p class="u-space--bottom">
-            Focusing on issues concerning racial injustice, police brutality, criminal justice reform, Black
-            immigration, economic injustice, LGBTQIA+ and human rights, environmental injustice, access to healthcare,
-            access to quality education, and voting rights and suppression.
+            {{ story.content.body[1].content.content[0].content[0].text }}
           </p>
         </template>
       </content-card>
+    </section>
+    <v-spacer size="quin"/>
+    <div class="l-container">
+      <hr>
+    </div>
+    <v-spacer size="quin"/>
+    <section class="l-container">
+      <h2 class="u-space--double--bottom u-align--center">Local News</h2>
+      <div class="l-grid l-grid--3up">
+        <card
+          image="https://blacklivesmatter.com/wp-content/uploads/2020/06/blmgn-news-juneteenth-national-holiday-061720-1000x750-01-400x300.jpg"
+          altText="Make Juneteenth a National Holiday"
+          subtitle="Make Juneteenth a National Holiday"
+          :hasTextLink="true"
+          cta="Read More"
+          link="https://blacklivesmatter.com/make-juneteenth-a-national-holiday/"
+          description="Now more than ever, we must highlight and celebrate the rich history of our community and our culture. In the last few days, cities and companies across the country have declared Juneteenth a holiday. Just like our lives, our HISTORY matters, including why Juneteenth is rooted in joy and is a call for liberation for the Black community."
+        />
+      </div>
     </section>
     <v-spacer size="quin"/>
     <div class="l-container">
@@ -93,15 +109,6 @@
       ContentCard,
       VSpacer,
       Card
-    },
-    computed: {
-      header () {
-        // return this.story.content.body[0].headline_h1
-        return this.story && this.story.content
-      },
-      body () {
-        return 'body'
-      }
     }
   }
 </script>
@@ -126,6 +133,7 @@
   }
 
   .home h1 {
+    max-width: 1100px;
     position: relative;
     z-index: 20;
     transform: rotate(-10deg);
@@ -147,7 +155,6 @@
     }
 
     span {
-
       &:last-child {
         margin-left: 1rem;
         @media all and (min-width: $medium) {
