@@ -6,7 +6,7 @@
     <p></p>
     <section class="l-container">
       <div class="l-grid l-grid--3up">
-        <div v-for="photo in story.content.body" :key="photo">
+        <div v-for="photo in story.content.body" :key="photo._uid">
           <image-with-caption
             :image="photo.image.filename"
             :caption="photo.caption"
