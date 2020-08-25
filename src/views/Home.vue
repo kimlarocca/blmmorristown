@@ -35,12 +35,12 @@
           <card
             :key="article._uid"
             :image="article.image.filename"
-            :altText="article.Title"
-            :subtitle="article.Title"
+            :altText="article.title"
+            :subtitle="article.title"
             :hasTextLink="true"
             cta="Read More"
             :link="article.link.url"
-            :description="article.Blurb"
+            :description="article.blurb"
           />
         </template>
       </div>
@@ -57,12 +57,12 @@
           <card
             :key="article._uid"
             :image="article.image.filename"
-            :altText="article.Title"
-            :subtitle="article.Title"
+            :altText="article.title"
+            :subtitle="article.title"
             :hasTextLink="true"
             cta="Read More"
             :link="article.link.url"
-            :description="article.Blurb"
+            :description="article.blurb"
           />
         </template>
       </div>
