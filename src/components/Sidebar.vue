@@ -4,20 +4,31 @@
          src="/img/sidebar-image.jpg"
          alt="black lives matter protest in morristown nj"/>
     <div class="u-background-color--gray--light u-padding--double u-space--bottom">
-      <h3 class="u-align--center u-space--bottom">Upcoming Events</h3>
-      <p><a href="/Events">Visit our events page</a> and join us at our next gathering in the Morristown area!</p>
+      <h3 class="u-align--center u-space--bottom">{{ story.content.body[0].title }}</h3>
+      <div class="rich-text">
+        <rich-text-renderer v-if="story.content.body[0].copy" :document="story.content.body[0].copy" />
+      </div>
     </div>
     <div class="u-background-color--gray--light u-padding--double">
-      <h3 class="u-align--center u-space--bottom">Fundraisers</h3>
-      <p>We appreciate your support of the movement. <a href="/Donate">Visit our fundraising page</a> and find out how
-        to help now.</p>
+      <h3 class="u-align--center u-space--bottom">{{ story.content.body[1].title }}</h3>
+      <div class="rich-text">
+        <rich-text-renderer v-if="story.content.body[1].copy" :document="story.content.body[1].copy" />
+      </div>
     </div>
   </section>
 </template>
 
 <script>
+  import storyblok from '../mixins/storyblok.mixin'
+
   export default {
-    name: 'Sidebar'
+    name: 'Sidebar',
+    mixins: [storyblok],
+    data () {
+      return {
+        slug: 'side-bar'
+      }
+    }
   }
 </script>
 

@@ -12,31 +12,36 @@
     </nav>
     <ul class="social-links u-align--center u-space--double--top">
       <social-link
+        v-if="story.content.body[1].facebook.url"
         icon="fab fa-facebook-f"
-        link="https://www.facebook.com"
+        :link="story.content.body[1].facebook.url"
         label="facebook">
       </social-link>
       <social-link
+        v-if="story.content.body[1].twitter.url"
         icon="fab fa-twitter"
-        link="https://www.twitter.com"
+        :link="story.content.body[1].twitter.url"
         label="twitter"
       >
       </social-link>
       <social-link
+        v-if="story.content.body[1].youtube.url"
         icon="fab fa-youtube"
-        link="https://www.youtube.com"
+        :link="story.content.body[1].youtube.url"
         label="youtube"
       >
       </social-link>
       <social-link
+        v-if="story.content.body[1].instagram.url"
         icon="fab fa-instagram"
-        link="https://www.instagram.com"
+        :link="story.content.body[1].facebook.url"
         label="instagram"
       >
       </social-link>
       <social-link
+        v-if="story.content.body[1].linkedin.url"
         icon="fab fa-linkedin-in"
-        link="https://www.linkedin.com"
+        :link="story.content.body[1].linkedin.url"
         label="linkedin"
       >
       </social-link>
@@ -47,13 +52,15 @@
 <script>
   import SocialLink from 'vue-evolve/src/components/SocialLink'
   import navigation from '../assets/json/navigation'
-
-  export default {
+  import storyblok from '../mixins/storyblok.mixin'
+export default {
     name: 'VFooter',
     components: { SocialLink },
+    mixins: [storyblok],
     data: function () {
       return {
-        navigation: navigation.navigation
+        navigation: navigation.navigation,
+        slug: 'footer'
       }
     }
   }
