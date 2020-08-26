@@ -5,7 +5,7 @@
     <v-spacer size="quad"/>
     <section class="l-container">
       <div class="l-grid l-grid--4x1 l-grid--1up--small l-grid--large-gutters rich-text">
-        <rich-text-renderer v-if="story.content.body[0].body" :document="story.content.body[0].body" />
+        <rich-text-renderer v-if="content" :document="content" />
         <sidebar/>
       </div>
     </section>
@@ -41,6 +41,11 @@
       SecondaryPageHero,
       Sidebar,
       VSpacer
+    },
+    computed: {
+      content () {
+        return this.story.content && this.story.content.body && this.story.content.body[0].body
+      }
     }
   }
 </script>

@@ -2,23 +2,23 @@
   <div class="home">
     <section class="home-hero"></section>
     <section class="l-container">
-      <h1>{{ story.content.body[0].headline_h1 }}</h1>
+      <h1>{{ title }}</h1>
       <div class="u-align--center"><a class="button arrow" href="/Contact">how to join</a></div>
     </section>
     <v-spacer size="quin"/>
     <section class="l-container">
       <content-card
-        :title="story.content.body[1].title"
-        :link="story.content.body[1].bottom_link.cached_url"
-        :cta="story.content.body[1].bottom_link_copy"
-        :video="story.content.body[1].video.url"
-        :image="story.content.body[1].image.filename"
+        :title="content_title"
+        :link="content_url"
+        :cta="content_link_copy"
+        :video="content_video_url"
+        :image="content_image_filename"
         altText="Real Talk Matters"
         verticalAlignment="middle"
       >
         <template slot="content">
           <p class="u-space--bottom">
-            {{ story.content.body[1].content.content[0].content[0].text }}
+            {{ content_body }}
           </p>
         </template>
       </content-card>
@@ -101,6 +101,31 @@
       Card
     },
     computed: {
+      title () {
+        return this.story.content && this.story.content.body && this.story.content.body[0].headline_h1
+      },
+      content_title () {
+        return this.story.content && this.story.content.body && this.story.content.body[1].title
+      },
+      content_url () {
+        return this.story.content &&
+        this.story.content.body &&
+        this.story.content.body[1].bottom_link.url
+          ? this.story.content.body[1].bottom_link.url
+          : this.story.content.body[1].bottom_link.cached_url
+      },
+      content_link_copy () {
+        return this.story.content && this.story.content.body && this.story.content.body[1].bottom_link_copy
+      },
+      content_video_url () {
+        return this.story.content && this.story.content.body && this.story.content.body[1].video.url
+      },
+      content_image_filename () {
+        return this.story.content && this.story.content.body && this.story.content.body[1].image.filename
+      },
+      content_body () {
+        return this.story.content && this.story.content.body && this.story.content.body[1].content.content[0].content[0].text
+      },
       local_news () {
         return this.story && this.story.content && this.story.content.body && this.story.content.body.filter(article => article.component === 'local-news')
       },

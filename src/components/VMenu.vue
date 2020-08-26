@@ -14,36 +14,36 @@
         </ul>
         <ul class="social-links">
           <social-link
-            v-if="story.content.body[1].facebook.url"
+            v-if="facebook"
             icon="fab fa-facebook-f"
-            :link="story.content.body[1].facebook.url"
+            :link="facebook"
             label="facebook">
           </social-link>
           <social-link
-            v-if="story.content.body[1].twitter.url"
+            v-if="twitter"
             icon="fab fa-twitter"
-            :link="story.content.body[1].twitter.url"
+            :link="twitter"
             label="twitter"
           >
           </social-link>
           <social-link
-            v-if="story.content.body[1].youtube.url"
+            v-if="youtube"
             icon="fab fa-youtube"
-            :link="story.content.body[1].youtube.url"
+            :link="youtube"
             label="youtube"
           >
           </social-link>
           <social-link
-            v-if="story.content.body[1].instagram.url"
+            v-if="instagram"
             icon="fab fa-instagram"
-            :link="story.content.body[1].facebook.url"
+            :link="instagram"
             label="instagram"
           >
           </social-link>
           <social-link
-            v-if="story.content.body[1].linkedin.url"
+            v-if="linkedin"
             icon="fab fa-linkedin-in"
-            :link="story.content.body[1].linkedin.url"
+            :link="linkedin"
             label="linkedin"
           >
           </social-link>
@@ -67,6 +67,23 @@
         navigation: navigation.navigation,
         menuOpen: false,
         slug: 'footer'
+      }
+    },
+    computed: {
+      facebook () {
+        return this.story.content && this.story.content.body && this.story.content.body[1].facebook.url
+      },
+      twitter () {
+        return this.story.content && this.story.content.body && this.story.content.body[1].twitter.url
+      },
+      youtube () {
+        return this.story.content && this.story.content.body && this.story.content.body[1].youtube.url
+      },
+      instagram () {
+        return this.story.content && this.story.content.body && this.story.content.body[1].instagram.url
+      },
+      linkedin () {
+        return this.story.content && this.story.content.body && this.story.content.body[1].linkedin.url
       }
     }
   }

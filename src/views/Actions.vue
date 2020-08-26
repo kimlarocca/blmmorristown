@@ -6,17 +6,17 @@
     <section class="l-container">
       <div class="l-grid l-grid--4x1 l-grid--1up--small l-grid--large-gutters">
         <div>
-          <div v-for="event in story.content.body" :key="event._uid">
+          <div v-for="action in content" :key="action._uid">
             <content-card
-              :title="event.title"
-              :image="event.image.filename"
+              :title="action.title"
+              :image="action.image.filename"
               layout="1x4"
-              :link="event.link.url"
+              :link="action.link.url"
               cta="learn more"
               class="u-space--double--bottom"
             >
               <template slot="content">
-                <p>{{ event.description }}</p>
+                <p>{{ action.description }}</p>
               </template>
             </content-card>
           </div>
@@ -58,6 +58,11 @@
       Sidebar,
       VSpacer,
       ContentCard
+    },
+    computed: {
+      content () {
+        return this.story.content && this.story.content.body
+      }
     }
   }
 </script>

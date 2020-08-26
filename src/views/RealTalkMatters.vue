@@ -6,10 +6,10 @@
     <section class="l-container">
       <div class="l-grid l-grid--4x1 l-grid--1up--small l-grid--large-gutters">
         <div>
-          <h2 class="u-space--bottom">{{ story.content.body[0].headline_h1 }}</h2>
-          <media-block v-if="story.content.body[1].url" :url="story.content.body[1].link.url" class="u-space--bottom"/>
+          <h2 class="u-space--bottom">{{ headline }}</h2>
+          <media-block v-if="video_url" :url="video_url" class="u-space--bottom"/>
           <div class="rich-text">
-            <rich-text-renderer v-if="story.content.body[2].body" :document="story.content.body[2].body"/>
+            <rich-text-renderer v-if="content" :document="content"/>
           </div>
         </div>
         <sidebar/>
@@ -49,6 +49,17 @@
       MediaBlock,
       Sidebar,
       VSpacer
+    },
+    computed: {
+      headline () {
+        return this.story.content && this.story.content.body && this.story.content.body[0].headline_h1
+      },
+      video_url () {
+        return this.story.content && this.story.content.body && this.story.content.body[1].link.url
+      },
+      content () {
+        return this.story.content && this.story.content.body && this.story.content.body[2].body
+      }
     }
   }
 </script>

@@ -7,14 +7,14 @@
       <div class="l-grid l-grid--4x1 l-grid--1up--small l-grid--large-gutters">
         <div>
           <div class="rich-text">
-            <rich-text-renderer v-if="story.content.body[0].body" :document="story.content.body[0].body" />
+            <rich-text-renderer v-if="content" :document="content" />
           </div>
-          <a class="button" :href="story.content.body[1].link.url" target="_blank">
-            {{ story.content.body[1].button_copy }}
+          <a class="button" :href="button_one_url" target="_blank">
+            {{ button_one_copy }}
           </a>
           <br><br>
-          <a class="button" :href="story.content.body[2].link.url" target="_blank">
-            {{ story.content.body[2].button_copy }}
+          <a class="button" :href="button_two_url" target="_blank">
+            {{ button_two_copy }}
           </a>
         </div>
         <sidebar/>
@@ -52,6 +52,23 @@
       SecondaryPageHero,
       Sidebar,
       VSpacer
+    },
+    computed: {
+      content () {
+        return this.story.content && this.story.content.body && this.story.content.body[0].body
+      },
+      button_one_url () {
+        return this.story.content && this.story.content.body && this.story.content.body[1].link.url
+      },
+      button_one_copy () {
+        return this.story.content && this.story.content.body && this.story.content.body[1].button_copy
+      },
+      button_two_url () {
+        return this.story.content && this.story.content.body && this.story.content.body[2].link.url
+      },
+      button_two_copy () {
+        return this.story.content && this.story.content.body && this.story.content.body[2].button_copy
+      }
     }
   }
 </script>
