@@ -29,16 +29,16 @@
   import storyblok from '../mixins/storyblok.mixin'
 
   export default {
-    name: 'Events',
+    name: 'Actions',
     mixins: [storyblok],
     data () {
       return {
-        slug: 'Events'
+        slug: 'Actions'
       }
     },
     metaInfo () {
       return {
-        title: 'Black Lives Matter Morristown | Events',
+        title: 'Black Lives Matter Morristown | Actions',
         meta: [
           {
             name: 'description',

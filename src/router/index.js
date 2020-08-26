@@ -61,8 +61,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "Resources" */ '../views/Resources.vue')
   },
   {
-    path: '/Events',
-    name: 'Events',
+    path: '/Actions',
+    name: 'Actions',
     meta: {
       title: 'Black Lives Matter Morristown | Events',
       description: 'The website of the Morristown NJ chapter for Black Lives Matter.',
