@@ -70,7 +70,7 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "Events" */ '../views/Events.vue')
+    component: () => import(/* webpackChunkName: "Events" */ '../views/Actions.vue')
   },
   {
     path: '/Donate',
