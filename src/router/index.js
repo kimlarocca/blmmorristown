@@ -13,6 +13,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
+    alias: '/Home',
     meta: {
       title: 'Black Lives Matter Morristown',
       description: 'The website of the Morristown NJ chapter for Black Lives Matter.',
@@ -21,7 +22,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/About',
+    path: '/about',
     name: 'About',
     meta: {
       title: 'Black Lives Matter Morristown | About',
@@ -60,8 +61,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "Resources" */ '../views/Resources.vue')
   },
   {
-    path: '/Events',
-    name: 'Events',
+    path: '/Actions',
+    name: 'Actions',
     meta: {
       title: 'Black Lives Matter Morristown | Events',
       description: 'The website of the Morristown NJ chapter for Black Lives Matter.',

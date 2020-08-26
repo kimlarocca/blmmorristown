@@ -5,9 +5,8 @@
     <v-spacer size="quad"/>
     <section class="l-container">
       <div class="l-grid l-grid--4x1 l-grid--1up--small l-grid--large-gutters">
-        <div>
-          <h2 class="u-space--bottom">Want to help?</h2>
-          <p>Please contact us at <a href="mailto:blmmorristown@gmail.com">blmmorristown @ gmail.com</a></p>
+        <div class="rich-text">
+          <rich-text-renderer v-if="story.content.body[0].body" :document="story.content.body[0].body" />
         </div>
         <sidebar/>
       </div>
@@ -19,9 +18,16 @@
   import SecondaryPageHero from '../components/SecondaryPageHero'
   import Sidebar from '../components/Sidebar'
   import VSpacer from 'vue-evolve/src/components/VSpacer'
+  import storyblok from '../mixins/storyblok.mixin'
 
   export default {
     name: 'Contact',
+    mixins: [storyblok],
+    data () {
+      return {
+        slug: 'Contact'
+      }
+    },
     metaInfo () {
       return {
         title: 'Black Lives Matter Morristown | Contact',
